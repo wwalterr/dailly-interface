@@ -17,4 +17,4 @@ application.mount(
 
 @application.get('/', tags=['Index'])
 async def index():
-    return RedirectResponse('/public/index.html')
+    return RedirectResponse('/public/index.html', status_code=301)
