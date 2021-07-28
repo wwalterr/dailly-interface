@@ -9,7 +9,10 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 
 
-application = FastAPI()
+application = FastAPI(
+    docs_url=None,
+    redoc_url=None,
+)
 
 application.mount('/static', StaticFiles(directory='static'), name='static')
 

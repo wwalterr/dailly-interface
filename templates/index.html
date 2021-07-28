@@ -10,8 +10,11 @@
 
         <title>Dailly Landing Page</title>
 
+        <link rel="shortcut icon" href="{{ url_for("static",
+        path="/favicon.ico") }}" />
+
         <link
-            href='{{ url_for("static", path="/index.css") }}'
+            href='{{ url_for("static", path="styles/index.css") }}'
             rel="stylesheet"
             type="text/css"
         />
