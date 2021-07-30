@@ -47,7 +47,9 @@
 
         <a href="" target="_blank" class="menu__link">Privacy Policy</a>
 
-        <a href="" target="_blank" class="menu__link">Terms & Conditions</a>
+        <a href="" target="_blank" class="menu__link" id="termsAndConditions"
+          >Terms & Conditions</a
+        >
       </nav>
     </header>
 
@@ -87,5 +89,18 @@
         class="presentation__image"
       />
     </aside>
+
+    <script type="text/javascript">
+      const link = document.getElementById("termsAndConditions");
+
+      const responsiveText = () => {
+        if (document.body.scrollWidth <= 700) link.innerHTML = "T&C";
+        else link.innerHTML = "Terms & Conditions";
+      };
+
+      responsiveText();
+
+      new ResizeObserver(responsiveText).observe(document.body);
+    </script>
   </body>
 </html>
