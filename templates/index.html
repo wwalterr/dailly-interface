@@ -8,11 +8,15 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<meta name="google-site-verification" content="Id5W8Eb6NzWqK9Jcm_WoWhMvrY458x0Kv400xafv1Qg" />
-	
+    <meta
+      name="google-site-verification"
+      content="Id5W8Eb6NzWqK9Jcm_WoWhMvrY458x0Kv400xafv1Qg"
+    />
+
     <title>Dailly Landing Page</title>
 
-    <link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico") }}" />
+    <link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico")
+    }}" />
 
     <link
       href="{{ url_for('static', path='styles/index.css') }}"
@@ -23,14 +27,29 @@
 
   <body>
     <header class="menu">
+      <img
+        src="{{ url_for('static', path='images/logo.png') }}"
+        alt="Dailly logo"
+        class="menu__image"
+      />
+
       <nav class="menu__navigator">
         <a href="mailto:hello.dailly@gmail.com" class="menu__link">Contact</a>
 
-        <a href="https://buy.stripe.com/fZe01e3TD87YgmcaEE" target="_blank" class="menu__link">
+        <a
+          href="https://buy.stripe.com/fZe01e3TD87YgmcaEE"
+          target="_blank"
+          class="menu__link"
+        >
           Coffee
         </a>
 
-        <a href="https://github.com/hydroxion/dailly" target="_blank" class="menu__link">Github</a>
+        <a
+          href="https://github.com/hydroxion/dailly"
+          target="_blank"
+          class="menu__link"
+          >Github</a
+        >
 
         <a href="" target="_blank" class="menu__link">Privacy Policy</a>
 
@@ -42,14 +61,14 @@
       <h1 class="content__title">Create, manage and track your daily goals</h1>
 
       <h2 class="content__subtitle">
-        Take a step each day and achieve new goals. No ADS, no trackers, and no
-        databases. Privacy and aesthetic as it should be!
+        Take a new step everyday and achieve your goals. No ADS, no trackers, and no
+        databases.
       </h2>
 
       <a
         href="https://play.google.com/store/apps/details?id=com.dailly.dailly"
         target="_self"
-		class="content_link"
+        class="content_link"
       >
         Play Store &#10132;
       </a>
@@ -59,19 +78,19 @@
       <img
         src="{{ url_for('static', path='images/goals.png') }}"
         alt="List of goals"
-		class="presentation__image"
+        class="presentation__image"
       />
 
       <img
         src="{{ url_for('static', path='images/metrics.png') }}"
         alt="Goal metrics"
-		class="presentation__image"
+        class="presentation__image"
       />
 
       <img
         src="{{ url_for('static', path='images/cloud.png') }}"
         alt="Goals backup"
-		class="presentation__image"
+        class="presentation__image"
       />
     </aside>
   </body>
