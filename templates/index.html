@@ -71,23 +71,29 @@
     </main>
 
     <aside class="presentation">
-      <img
-        src="{{ url_for('static', path='images/goals.png') }}"
-        alt="List of goals"
-        class="presentation__image"
-      />
+      <div class="presentation__container">
+        <img
+          src="{{ url_for('static', path='images/goals.png') }}"
+          alt="List of goals"
+          class="presentation__image"
+        />
+      </div>
 
-      <img
-        src="{{ url_for('static', path='images/metrics.png') }}"
-        alt="Goal metrics"
-        class="presentation__image"
-      />
+      <div class="presentation__container">
+        <img
+          src="{{ url_for('static', path='images/metrics.png') }}"
+          alt="Goal metrics"
+          class="presentation__image"
+        />
+      </div>
 
-      <img
-        src="{{ url_for('static', path='images/cloud.png') }}"
-        alt="Goals backup"
-        class="presentation__image"
-      />
+      <div class="presentation__container">
+        <img
+          src="{{ url_for('static', path='images/cloud.png') }}"
+          alt="Goals backup"
+          class="presentation__image"
+        />
+      </div>
     </aside>
 
     <script type="text/javascript">
