@@ -1,26 +1,73 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Dailly Landing Page</title>
+    <title>Dailly Landing Page</title>
 
-        <link rel="shortcut icon" href="{{ url_for("static",
-        path="/favicon.ico") }}" />
+    <link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico")
+    }}" />
 
-        <link
-            href='{{ url_for("static", path="styles/index.css") }}'
-            rel="stylesheet"
-            type="text/css"
-        />
-    </head>
+    <link
+      href="{{ url_for('static', path='styles/index.css') }}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-    <body>
-        <p>Dailly Landing Page</p>
-    </body>
+  <body>
+    <header>
+      <nav>
+        <a href="mailto:hello.dailly@gmail.com">Contact</a>
+
+        <a href="https://buy.stripe.com/fZe01e3TD87YgmcaEE" target="_blank">
+          Coffee
+        </a>
+
+        <a href="https://github.com/hydroxion/dailly" target="_blank">Github</a>
+
+        <a href="" target="_blank">Privacy Policy</a>
+
+        <a href="" target="_blank">Terms & Conditions</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Create, manage and track your daily goals</h1>
+
+      <h2>
+        Take a step each day and achieve new goals. No ADS, no trackers, and no
+        databases. Privacy and aesthetic as it should be!
+      </h2>
+
+      <a
+        href="https://play.google.com/store/apps/details?id=com.dailly.dailly"
+        target="_self"
+      >
+        Play Store &#10132;
+      </a>
+    </main>
+
+    <aside>
+      <img
+        src="{{ url_for('static', path='images/goals.png') }}"
+        alt="List of goals"
+      />
+
+      <img
+        src="{{ url_for('static', path='images/metrics.png') }}"
+        alt="Goal metrics"
+      />
+
+      <img
+        src="{{ url_for('static', path='images/cloud.png') }}"
+        alt="Goals backup"
+      />
+    </aside>
+  </body>
 </html>

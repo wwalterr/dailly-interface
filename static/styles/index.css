@@ -1,15 +1,15 @@
 :root {
-    --primary: #000;
-    --secondary: #fff;
+  --primary: #ffffff;
+  --secondary: #000000;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: var(--primary);
-    color: var(--secondary);
+  background: var(--primary);
+  color: var(--secondary);
 }
