@@ -14,13 +14,25 @@ body {
 
 body {
   display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "menu presentation"
     "content  presentation";
-  grid-template-rows: 100px 1fr;
-  grid-template-columns: 1fr 1fr;
   background: var(--primary);
   color: var(--secondary);
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background: red;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menu"
+      "content"
+      "presentation";
+  }
 }
 
 /* Menu */
