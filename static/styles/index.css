@@ -1,7 +1,17 @@
 /* Global */
 :root {
-  --primary: #ffffff;
-  --secondary: #000000;
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-tertiary: #9b9fab;
+  --color-quaternary: #cfcdd5;
+  --padding-level-one: 10px;
+  --padding-level-two: 20px;
+  --padding-level-three: 40px;
+  --transition-time: 0.3s;
+}
+
+* {
+  text-decoration: none;
 }
 
 html,
@@ -19,13 +29,12 @@ body {
   grid-template-areas:
     "menu presentation"
     "content  presentation";
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 @media only screen and (max-width: 700px) {
   body {
-    background: red;
     grid-template-rows: 100px 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -38,29 +47,79 @@ body {
 /* Menu */
 .menu {
   grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 0 var(--padding-level-three);
 }
 
 .menu__image {
+  width: 80px;
+  margin-right: var(--padding-level-three);
 }
 
 .menu__navigator {
 }
 
 .menu__link {
+  font-size: 0.85em;
+  font-family: Inter;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  color: var(--color-tertiary);
+  padding-right: var(--padding-level-one);
+  transition: var(--transition-time);
+}
+
+.menu__link:last-child {
+  padding-right: 0;
+}
+.menu__link:hover {
+  color: var(--color-quaternary);
 }
 
 /* Content */
 .content {
   grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 0 var(--padding-level-three);
+  padding-bottom: var(--padding-level-two);
+}
+
+.content * {
+  margin: var(--padding-level-two) 0;
 }
 
 .content__title {
+  font-size: 3em;
+  font-family: Inter;
+  font-weight: 700;
+  color: var(--color-secondary);
 }
 
 .content__subtitle {
+  font-size: 1.25em;
+  font-family: Inter;
+  font-weight: 400;
+  color: var(--color-tertiary);
 }
 
 .content__link {
+  font-size: 1.25em;
+  font-family: Inter;
+  font-weight: 600;
+  color: var(--color-secondary);
+  transition: var(--transition-time);
+}
+
+.content__link:hover {
+  filter: opacity(0.75);
 }
 
 /* Presentation */
@@ -69,4 +128,5 @@ body {
 }
 
 .presentation__image {
+  width: 500px;
 }
