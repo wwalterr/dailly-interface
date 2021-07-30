@@ -10,8 +10,7 @@
 
     <title>Dailly Landing Page</title>
 
-    <link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico")
-    }}" />
+    <link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico") }}" />
 
     <link
       href="{{ url_for('static', path='styles/index.css') }}"
@@ -21,26 +20,26 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="mailto:hello.dailly@gmail.com">Contact</a>
+    <header class="menu">
+      <nav class="menu__navigator">
+        <a href="mailto:hello.dailly@gmail.com" class="menu__link">Contact</a>
 
-        <a href="https://buy.stripe.com/fZe01e3TD87YgmcaEE" target="_blank">
+        <a href="https://buy.stripe.com/fZe01e3TD87YgmcaEE" target="_blank" class="menu__link">
           Coffee
         </a>
 
-        <a href="https://github.com/hydroxion/dailly" target="_blank">Github</a>
+        <a href="https://github.com/hydroxion/dailly" target="_blank" class="menu__link">Github</a>
 
-        <a href="" target="_blank">Privacy Policy</a>
+        <a href="" target="_blank" class="menu__link">Privacy Policy</a>
 
-        <a href="" target="_blank">Terms & Conditions</a>
+        <a href="" target="_blank" class="menu__link">Terms & Conditions</a>
       </nav>
     </header>
 
-    <main>
-      <h1>Create, manage and track your daily goals</h1>
+    <main class="content">
+      <h1 class="content__title">Create, manage and track your daily goals</h1>
 
-      <h2>
+      <h2 class="content__subtitle">
         Take a step each day and achieve new goals. No ADS, no trackers, and no
         databases. Privacy and aesthetic as it should be!
       </h2>
@@ -48,25 +47,29 @@
       <a
         href="https://play.google.com/store/apps/details?id=com.dailly.dailly"
         target="_self"
+		class="content_link"
       >
         Play Store &#10132;
       </a>
     </main>
 
-    <aside>
+    <aside class="presentation">
       <img
         src="{{ url_for('static', path='images/goals.png') }}"
         alt="List of goals"
+		class="presentation__image"
       />
 
       <img
         src="{{ url_for('static', path='images/metrics.png') }}"
         alt="Goal metrics"
+		class="presentation__image"
       />
 
       <img
         src="{{ url_for('static', path='images/cloud.png') }}"
         alt="Goals backup"
+		class="presentation__image"
       />
     </aside>
   </body>

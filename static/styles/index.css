@@ -1,3 +1,4 @@
+/* Global */
 :root {
   --primary: #ffffff;
   --secondary: #000000;
@@ -5,6 +6,8 @@
 
 html,
 body {
+  width: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -12,4 +15,34 @@ body {
 body {
   background: var(--primary);
   color: var(--secondary);
+}
+
+/* Menu */
+.menu {
+}
+
+.menu__navigator {
+}
+
+.menu__link {
+}
+
+/* Content */
+.content {
+}
+
+.content__title {
+}
+
+.content__subtitle {
+}
+
+.content__link {
+}
+
+/* Presentation */
+.presentation {
+}
+
+.presentation__image {
 }
