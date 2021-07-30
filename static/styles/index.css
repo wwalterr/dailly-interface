@@ -149,12 +149,19 @@ body {
   height: 100%;
   background-color: var(--color-secondary);
   clip-path: polygon(28% 45%, 100% 0, 100% 100%, 0% 100%);
+  transition: var(--transition-time);
+}
+
+@media only screen and (max-width: 1400px) {
+  .presentation__geometry {
+    clip-path: polygon(11% 68%, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .presentation__scroll {
   position: absolute;
-	margin: 0 auto;	
-	bottom: 2.25%;
+  margin: 0 auto;
+  bottom: 2.25%;
 }
 
 .presentation__container {
