@@ -13,12 +13,19 @@ body {
 }
 
 body {
+  display: grid;
+  grid-template-areas:
+    "menu presentation"
+    "content  presentation";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr;
   background: var(--primary);
   color: var(--secondary);
 }
 
 /* Menu */
 .menu {
+  grid-area: menu;
 }
 
 .menu__navigator {
@@ -29,6 +36,7 @@ body {
 
 /* Content */
 .content {
+  grid-area: content;
 }
 
 .content__title {
@@ -42,6 +50,7 @@ body {
 
 /* Presentation */
 .presentation {
+  grid-area: presentation;
 }
 
 .presentation__image {
