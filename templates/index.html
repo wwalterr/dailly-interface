@@ -1,124 +1,102 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+	<meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta
-      name="google-site-verification"
-      content="Id5W8Eb6NzWqK9Jcm_WoWhMvrY458x0Kv400xafv1Qg"
-    />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Dailly Landing Page</title>
+	<meta name="google-site-verification" content="Id5W8Eb6NzWqK9Jcm_WoWhMvrY458x0Kv400xafv1Qg" />
 
-    <link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico") }}" />
+	<title>Dailly Landing Page</title>
 
-    <link
-      href="{{ url_for('static', path='styles/index.css') }}"
-      rel="stylesheet"
-      type="text/css"
-    />
+	<link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico") }}" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link href="{{ url_for('static', path='styles/index.css') }}" rel="stylesheet" type="text/css" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <body>
-    <header class="menu">
-      <img
-        src="{{ url_for('static', path='images/logo.png') }}"
-        alt="Dailly logo"
-        class="menu__image"
-      />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
 
-      <nav class="menu__navigator">
-        <a href="mailto:hello.dailly@gmail.com" class="menu__link">Contact</a>
+<body>
+	<header class="menu">
+		<img src="{{ url_for('static', path='images/logo.png') }}" alt="Dailly logo" class="menu__image" />
 
-        <a href="" target="_blank" class="menu__link" id="privacyPolicy">
-          Privacy Policy
-        </a>
+		<nav class="menu__navigator">
+			<a href="mailto:hello.dailly@gmail.com" class="menu__link">Contact</a>
 
-        <a href="" target="_blank" class="menu__link" id="termsAndConditions">
-			Terms & Conditions
+			<a href="" target="_blank" class="menu__link" id="privacyPolicy">
+				Privacy Policy
+			</a>
+
+			<a href="" target="_blank" class="menu__link" id="termsAndConditions">
+				Terms & Conditions
+			</a>
+		</nav>
+	</header>
+
+	<main class="content">
+		<h1 class="content__title">Create, manage and track your daily goals</h1>
+
+		<h2 class="content__subtitle">
+			Take a new step everyday and achieve your goals. No ADS, no trackers,
+			and no databases.
+		</h2>
+
+		<a href="https://play.google.com/store/apps/details?id=com.dailly.dailly" target="_self" class="content__link">
+			Play Store &#10132;
 		</a>
-      </nav>
-    </header>
+	</main>
 
-    <main class="content">
-      <h1 class="content__title">Create, manage and track your daily goals</h1>
+	<aside class="presentation">
+		<div class="presentation__geometry"></div>
 
-      <h2 class="content__subtitle">
-        Take a new step everyday and achieve your goals. No ADS, no trackers,
-        and no databases.
-      </h2>
+		<div class="presentation__container">
+			<img src="{{ url_for('static', path='images/goals.png') }}" alt="List of goals"
+				class="presentation__image" />
 
-      <a
-        href="https://play.google.com/store/apps/details?id=com.dailly.dailly"
-        target="_self"
-        class="content__link"
-      >
-        Play Store &#10132;
-      </a>
-    </main>
+			<img src="{{ url_for('static', path='images/scroll.png') }}" alt="Scroll indicator"
+				class="presentation__scroll" />
+		</div>
 
-    <aside class="presentation">
-      <div class="presentation__geometry"></div>
+		<div class="presentation__container">
+			<img src="{{ url_for('static', path='images/metrics.png') }}" alt="Goal metrics"
+				class="presentation__image" />
+		</div>
 
-      <div class="presentation__container">
-        <img
-          src="{{ url_for('static', path='images/goals.png') }}"
-          alt="List of goals"
-          class="presentation__image"
-        />
-      </div>
+		<div class="presentation__container">
+			<img src="{{ url_for('static', path='images/cloud.png') }}" alt="Goals backup"
+				class="presentation__image" />
+		</div>
+	</aside>
 
-      <div class="presentation__container">
-        <img
-          src="{{ url_for('static', path='images/metrics.png') }}"
-          alt="Goal metrics"
-          class="presentation__image"
-        />
-      </div>
+	<script type="text/javascript">
+		const termsAndConditions = document.getElementById("termsAndConditions");
 
-      <div class="presentation__container">
-        <img
-          src="{{ url_for('static', path='images/cloud.png') }}"
-          alt="Goals backup"
-          class="presentation__image"
-        />
-      </div>
-    </aside>
+		const privacyPolicy = document.getElementById("privacyPolicy");
 
-    <script type="text/javascript">
-      const termsAndConditions = document.getElementById("termsAndConditions");
+		const responsiveText = () => {
+			if (document.body.scrollWidth <= 700) {
+				termsAndConditions.innerHTML = "T&C";
 
-      const privacyPolicy = document.getElementById("privacyPolicy");
+				privacyPolicy.innerHTML = "Privacy";
+			} else {
+				termsAndConditions.innerHTML = "Terms & Conditions";
 
-      const responsiveText = () => {
-        if (document.body.scrollWidth <= 700) {
-          termsAndConditions.innerHTML = "T&C";
+				privacyPolicy.innerHTML = "Privacy Policy";
+			}
+		};
 
-          privacyPolicy.innerHTML = "Privacy";
-        } else {
-          termsAndConditions.innerHTML = "Terms & Conditions";
+		responsiveText();
 
-          privacyPolicy.innerHTML = "Privacy Policy";
-        }
-      };
+		new ResizeObserver(responsiveText).observe(document.body);
+	</script>
+</body>
 
-      responsiveText();
-
-      new ResizeObserver(responsiveText).observe(document.body);
-    </script>
-  </body>
 </html>
