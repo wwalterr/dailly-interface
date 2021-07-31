@@ -1,0 +1,30 @@
+/* Global */
+:root {
+  --color-primary: #efefef21;
+  --color-secondary: #000000;
+  --color-tertiary: #9b9fab;
+  --color-quaternary: #cfcdd5;
+  --color-quinary: #efefef57;
+  --padding-level-one: 10px;
+  --padding-level-two: 20px;
+  --padding-level-three: 40px;
+  --transition-time: 0.3s;
+  --border-radius: 5px;
+}
+
+::selection {
+  color: var(--color-secondary);
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="{{ url_for("static", path="/favicon.ico") }}" />
+
+	<title>{{ title }}</title>
+
+	<link href="{{ url_for('static', path='styles/layout.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<a href="/">
+		<img src="{{ url_for('static', path='images/logo.png') }}" alt="Dailly logo" class="image" />
+	</a>
+
+	<main class="content">
+		{% block content %} {% endblock %}
+	</main>
+</body>
+
+</html>

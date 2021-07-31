@@ -1,0 +1,21 @@
+/* Global */
+@import url("global.css");
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header */
+.image {
+  width: 80px;
+  margin: var(--padding-level-three) 0;
+}
+
+/* Content */
+.content {
+  max-width: 1000px;
+  min-width: 50%;
+}

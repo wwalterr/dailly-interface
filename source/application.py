@@ -24,3 +24,13 @@ templates = Jinja2Templates(directory='templates')
 @application.get('/', response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse('index.html', {'request': request})
+
+
+@application.get('/privacy-policy', response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse('privacy_policy.html', {'request': request, 'title': 'Privacy Policy'})
+
+
+@application.get('/terms-and-conditions', response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse('terms_and_conditions.html', {'request': request, 'title': 'Terms and conditions'})
