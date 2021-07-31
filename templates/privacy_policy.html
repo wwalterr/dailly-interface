@@ -1,8 +1,16 @@
 {% extends "layout.html" %}
 
+
+{% block imports %}
+
+<link href="{{ url_for('static', path='styles/privacy_policy.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+
 {% block content%}
 
 <!-- Cookies need to be enabled to load an iframe -->
-<iframe src="https://audaxly.com/privacy-policy?code=kojej1j04hvs8e" title="Privacy Policy" width="500" height="1000" frameBorder="0"></iframe>
+<iframe src="https://audaxly.com/privacy-policy?code=kojej1j04hvs8e" title="Privacy Policy" frameBorder="0"></iframe>
 
 {% endblock %}

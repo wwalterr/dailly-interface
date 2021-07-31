@@ -14,6 +14,8 @@
 	<title>{{ title }}</title>
 
 	<link href="{{ url_for('static', path='styles/layout.css') }}" rel="stylesheet" type="text/css" />
+
+	{% block imports %} {% endblock %}
 </head>
 
 <body>
