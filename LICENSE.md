@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Dailly Landing Page
+Copyright (c) 2021 Dailly Site
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files, to deal in the software
