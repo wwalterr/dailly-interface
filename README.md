@@ -1,10 +1,10 @@
 # Dailly landing page
 
-Dailly landing page.
+Dailly site.
 
 ## About
 
-Landing page to the mobile application [Dailly](https://github.com/hydroxion/dailly).
+Site to the mobile application [Dailly](https://github.com/hydroxion/dailly).
 
 ## Built with
 
