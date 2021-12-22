@@ -1,4 +1,4 @@
-# Dailly landing page
+# Dailly
 
 Dailly landing page.
 
