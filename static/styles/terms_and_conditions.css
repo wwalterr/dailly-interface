@@ -1,6 +1,12 @@
 /* Content */
 .content {
-  padding: 0 var(--padding-level-four);
+  padding: 24px 174px 0 174px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .content {
+	padding: 12px 44px;
+  }
 }
 
 /* Header */
