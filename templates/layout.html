@@ -16,19 +16,6 @@
 	<link href="{{ url_for('static', path='styles/layout.css') }}" rel="stylesheet" type="text/css" />
 
 	{% block imports %} {% endblock %}
-
-	<script>
-		const handleEventMessage = (event) => {
-			const iframe = document.getElementById("privacyPolicy")
-			
-			if(iframe)
-				iframe.style.height = event.data.height;
-		};
-	
-		if (window.addEventListener) {
-			window.addEventListener("message", handleEventMessage);
-		}
-	</script>
 </head>
 
 <body>
