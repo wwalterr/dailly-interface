@@ -10,6 +10,25 @@
 
 {% block content%}
 
-<iframe src="https://audaxly.com/privacy-policy?code=kojej1j04hvs8e" title="Privacy Policy" frameBorder="0"></iframe>
+<iframe
+	title="Privacy Policy"
+	id="privacyPolicy"
+	src="https://audaxly.com/privacy-policy?code=kojej1j04hvs8e"
+	scrolling="no"
+	style="
+		border: none;
+		width: 100%;
+		height: 100vh;
+		transition: height 200ms ease-in-out;
+	"
+></iframe>
+
+<script>
+	const handleEventMessage = (event) => {
+	  document.getElementById("privacyPolicy").style.height = event.data.height;
+	};
+
+	window.addEventListener("message", handleEventMessage);
+</script>
 
 {% endblock %}
