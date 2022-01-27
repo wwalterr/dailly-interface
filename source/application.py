@@ -6,8 +6,9 @@ from fastapi.staticfiles import StaticFiles
 
 from fastapi.templating import Jinja2Templates
 
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 application = FastAPI(
     docs_url=None,
@@ -19,6 +20,11 @@ application.mount('/static', StaticFiles(directory='static'), name='static')
 application.add_middleware(GZipMiddleware, minimum_size=1000)
 
 templates = Jinja2Templates(directory='templates')
+
+
+@application.exception_handler(StarletteHTTPException)
+async def custom_http_exception_handler(request, exception):
+    return RedirectResponse('/')
 
 
 @application.get('/', response_class=HTMLResponse)
