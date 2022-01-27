@@ -28,7 +28,12 @@
 	  document.getElementById("privacyPolicy").style.height = event.data.height;
 	};
 
-	window.addEventListener("message", handleEventMessage);
+	document.onreadystatechange = () => {
+		if (document.readyState == "complete") {
+			window.addEventListener("message", handleEventMessage);
+		}
+	}
+		
 </script>
 
 {% endblock %}
