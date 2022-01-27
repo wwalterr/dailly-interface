@@ -23,19 +23,4 @@
 	"
 ></iframe>
 
-<script>
-	const handleEventMessage = (event) => {
-		console.log(event)
-
-	  	document.getElementById("privacyPolicy").style.height = event.data.height;
-	};
-
-	document.onreadystatechange = () => {
-		if (document.readyState == "complete") {
-			window.addEventListener("message", handleEventMessage);
-		}
-	}
-		
-</script>
-
 {% endblock %}
