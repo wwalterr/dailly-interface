@@ -1,0 +1,23 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-213687397-3"></script>
+
+	<script>
+		// Google Analytics
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag(){dataLayer.push(arguments);}
+
+		gtag('js', new Date());
+
+		gtag('config', 'UA-213687397-3');
+
+		// Privacy Policy
+		function handleEventMessage(event) {
+			console.log(event)
+			
+			document.getElementById("privacyPolicy").style.height = event.data.height;
+		};
+
+		document.addEventListener("DOMContentLoaded", function() {
+			window.addEventListener("message", handleEventMessage);
+		});
+	</script>
